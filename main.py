@@ -1,5 +1,6 @@
 from turtle import *
 from time import sleep
+from random import randint
 
 t = Turtle()
 t.speed(0)
@@ -53,10 +54,17 @@ t.seth(0)
 plano_cartesiano()
 t.color('blue')
 t.pu()
-t.goto(1, funcao_2(1))
+t.goto(-100, funcao_2(-1))
 t.pd()
-for x in range(1, 201):
-    t.goto(x, funcao_2(x))
+for x in range(-100, -1):
+    t.goto(x, funcao_2(x/50)*10)
+
+t.pu()
+t.goto(1, funcao_2(100))
+t.pd()
+for x in range(1, 100):
+    t.goto(x, funcao_2(x/50)*10)
+
 
 sleep(3)
 t.clear()
@@ -112,6 +120,25 @@ for x in range(-20, 50):
 
 sleep(3)
 t.clear()
+
+#EXTRA
+t1 = Turtle()
+t1.shape('turtle')
+t2 = Turtle()
+t2.shape('turtle')
+
+t1.speed(1)
+t1.pu()
+t1.color("purple")
+t1.goto(-300, 180)
+t2.speed(1)
+t2.pu()
+t2.color("green")
+t2.goto(-300, 150)
+
+for num in range(30):
+    t1.fd(randint(5, 10))
+    t2.fd(randint(5, 10))
 
 
 
