@@ -43,7 +43,7 @@ t.pu()
 t.goto(0, funcao_1(0))
 t.pd()
 for x in range(0, 201):
-    t.goto(x, funcao_1(x))
+    t.goto(x, funcao_1(x)*2)
 
 sleep(3)
 t.clear()
@@ -66,10 +66,10 @@ t.seth(0)
 plano_cartesiano()
 t.color('blue')
 t.pu()
-t.goto(-100, funcao_3(-100))
+t.goto(-100, funcao_3(-5))
 t.pd()
-for x in range(-99, 9):
-    t.goto(x, funcao_3(x))
+for x in range(-5, 8):
+    t.goto(x*2, funcao_3(x)*2)
 
 sleep(3)
 t.clear()
@@ -96,6 +96,19 @@ t.goto(-21, funcao_5(-21))
 t.pd()
 for x in range(-20, 50):
     t.goto(x, funcao_5(x))
+
+sleep(3)
+t.clear()
+
+t.color('black')
+t.seth(0)
+plano_cartesiano()
+t.color('blue')
+t.pu()
+t.goto(-21, funcao_6(-21))
+t.pd()
+for x in range(-20, 50):
+    t.goto(x, funcao_6(x))
 
 sleep(3)
 t.clear()
